@@ -51,8 +51,8 @@ class InvoiceController extends Controller
             'user_id'=>auth()->user()->id,
         ]);
         DB::commit();
-        session()->flash('Add','تم اضافة المنتج بنجاح');
-            return redirect('categories');
+        session()->flash('Add','تم اضافة الفاتورة بنجاح');
+            return redirect('invoices');
     }
         catch (\Exception $e) {
             DB::rollBack();
@@ -91,8 +91,8 @@ class InvoiceController extends Controller
                 'status' => 1,
                 'notes' => $request->notes,
             ]);
-            session()->flash('edit','تم تعديل المنتج بنجاح');
-                return redirect('categories');
+            session()->flash('edit','تم تعديل الفاتورة بنجاح');
+                return redirect('invoices');
         }
             catch (\Exception $e) {
                 

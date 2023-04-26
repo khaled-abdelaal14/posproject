@@ -37,12 +37,12 @@
                   </span>
                 </div>
                 <div class="float-right text-right">
-                  <p class="card-text text-dark">Visitors</p>
-                  <h4>65,650</h4>
+                  <p class="card-text text-dark">{{ trans('website/category.categories') }}</p>
+                  <h4>{{App\Models\category::count()}}</h4>
                 </div>
               </div>
               <p class="text-muted pt-3 mb-0 mt-2 border-top">
-                <i class="fa fa-exclamation-circle mr-1" aria-hidden="true"></i> 81% lower growth
+                <i class="fa fa-exclamation-circle mr-1" aria-hidden="true"></i> Total Categories
               </p>
             </div>
           </div>
@@ -57,12 +57,12 @@
                   </span>
                 </div>
                 <div class="float-right text-right">
-                  <p class="card-text text-dark">Orders</p>
-                  <h4>656</h4>
+                  <p class="card-text text-dark">{{ trans('website/product.products') }}</p>
+                  <h4>{{App\Models\product::count()}}</h4>
                 </div>
               </div>
               <p class="text-muted pt-3 mb-0 mt-2 border-top">
-                <i class="fa fa-bookmark-o mr-1" aria-hidden="true"></i> Total sales
+                <i class="fa fa-bookmark-o mr-1" aria-hidden="true"></i> Total Products
               </p>
             </div>
           </div>
@@ -77,12 +77,12 @@
                   </span>
                 </div>
                 <div class="float-right text-right">
-                  <p class="card-text text-dark">Revenue</p>
-                  <h4>$65656</h4>
+                  <p class="card-text text-dark">{{ trans('website/invoice.invoice') }}</p>
+                  <h4>{{App\Models\invoice::count()}}</h4>
                 </div>
               </div>
               <p class="text-muted pt-3 mb-0 mt-2 border-top">
-                <i class="fa fa-calendar mr-1" aria-hidden="true"></i> Sales Per Week 
+                <i class="fa fa-calendar mr-1" aria-hidden="true"></i> Total Sales   
               </p>
             </div>
           </div>

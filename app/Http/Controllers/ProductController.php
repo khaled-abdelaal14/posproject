@@ -37,7 +37,7 @@ class ProductController extends Controller
 
             ]);
             session()->flash('Add','تم اضافة المنتج بنجاح');
-            return redirect()->back();
+            return redirect('products');
 
         }
         catch(\Exception $e){

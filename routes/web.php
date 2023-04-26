@@ -22,12 +22,15 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
     ], function(){ 
         // Route::auth();
         Route::get('/dashboard', function () {
             return view('backend.dashboard');
         })->name('dashboard');
+        Route::get('/login', function () {
+            return view('auth.login');
+        })->name('ll');
         
         //categories
         Route::resource('categories',CategoryController::class);
@@ -55,9 +58,11 @@ Route::group(
 
 
         require __DIR__.'/auth.php';
+       
 
 
     });
+
 
 // require __DIR__.'/auth.php';
 
