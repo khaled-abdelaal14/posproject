@@ -6,6 +6,6 @@ return [
     'API Use Policy' => 'سياسية استخدام API',
     'Terms & Conditions' => 'البنود و الظروف',
     'copy right' => 'حقوق النشر',
-    'ElNemr' => 'عبدالعال',
+    'ElNemr' => 'برشا',
     'All Rights Reserved' => 'كل الحقوق محفوظة',
 ];

@@ -135,6 +135,7 @@ class InvoiceController extends Controller
             $invoice= invoice::findorFail($request->invoice_id);
             $invoice->update([
                 'status'=>$request->status,
+                
             ]);
             // validate payment 
             // $todayDate = date('m/d/Y');
@@ -153,12 +154,13 @@ class InvoiceController extends Controller
             ]);
 
             DB::commit();
-            session()->flash('Edit', __('backend/message.change stat invoice'));
+            session()->flash('edit', __('backend/message.change stat invoice'));
             return redirect()->back();
 
         }
         catch (\Exception $e) {
             DB::rollback();
+            
             return redirect()->back()->withErrors(['error' => $e->getMessage()]);
         }
     }

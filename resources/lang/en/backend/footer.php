@@ -6,6 +6,6 @@ return [
     'API Use Policy' => 'API Use Policy',
     'Terms & Conditions' => 'Terms & Conditions',
     'copy right' => 'copy right',
-    'ElNemr' => 'ElNemr',
+    'ElNemr' => 'Barca',
     'All Rights Reserved' => 'All Rights Reserved',
 ];
